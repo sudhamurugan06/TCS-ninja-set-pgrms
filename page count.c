@@ -18,8 +18,4 @@ if(c>(n/2)-(p/2))
 c=(n/2)-(p/2);
 }
     return c;
-    /*
-     * Write your code here.
-     */
-
 }
