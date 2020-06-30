@@ -15,6 +15,39 @@ Sample Output :
 433
 ************************************************************************ANSWER******************************************************************************************
 import java.util.*;
+public class FindNth 
+{ 
+	// Return n-th number in series made of 4 and 7 
+	static int printNthElement(int n) 
+	{ 
+		// create an array of size (n+1) 
+		int arr[] = new int[n+1]; 
+		arr[1] = 3; 
+		arr[2] = 4; 
+	
+		for (int i=3; i<=n; i++) 
+		{ 
+			// If i is odd 
+			if (i%2 != 0) 
+				arr[i] = arr[i/2]*10 + 3; 
+			else
+				arr[i] = arr[(i/2)-1]*10 + 4; 
+		} 
+		return arr[n]; 
+	}	 
+	
+	// main function 
+	public static void main (String[] args) 
+	{ 
+		int n;
+		Scanner s=new Scanner(System.in);
+		//Scanner s=new Scanner(System.in);
+		n=s.nextInt();
+		System.out.println(printNthElement(n)); 
+	} 
+} 
+***************************************
+import java.util.*;
 public class Main{
   public static void main(String []args){
     int n=0,flag=1,c=0;
